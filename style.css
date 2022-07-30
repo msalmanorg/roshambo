@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.game-container {
+  box-shadow: 5px 5px 16px 2px rgb(85 83 83 / 32%);
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.player-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+  margin: 10px 0 00 0;
+}
+
+.game-container div.player-container:nth-child(2) div,
+.game-container div.player-container:nth-child(2) h2 span:last-child {
+  color: dodgerblue;
+}
+
+.game-container div.player-container:nth-child(2) div i:hover {
+
+  /* color: #635f5f; */
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+}
+
+.game-container div.player-container:nth-child(2) div i,
+.game-container div.player-container:nth-child(3) div i {
+  cursor: pointer;
+  border-radius: 10px;
+  /* height: 72px; */
+  aspect-ratio: 1/1;
+  width: 75px;
+  display: grid;
+  place-items: center;
+}
+
+.game-container div.player-container:nth-child(3) div,
+.game-container div.player-container:nth-child(3) h2 span:last-child {
+  color: #e5c50e;
+}
+
+.game-container div.player-container:nth-child(3) div i.active-choice,
+.game-container div.player-container:nth-child(3) div i.active-choice:hover {
+  background-color: #e5c50e;
+}
+
+.game-container div.player-container:nth-child(3) div i {
+  cursor: no-drop;
+}
+
+i.active-choice,
+i.active-choice:hover {
+  color: white !important;
+  background: dodgerblue;
+  border:1px solid ;
+
+}
+
+.game-container div.player-container:nth-child(2) div i:hover {
+  border: 1px solid dodgerblue;
+}
+
+.player-container h2 {
+  padding: 0 20px;
+  margin: 10px 0 20px 0;
+}
+
+.player-container div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.far {
+  font-size: 40px;
+  /* margin-right: 40px; */
+  User-select: none;
+}
+
+.reset_result {
+  padding: 0 20px 0;
+}
+
+.reset_result i {
+  font-size: 40px;
+  margin: 10px 0 10px 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.reset_result i:hover {
+  /* color: #FF0000; */
+  animation: rotate 0.6s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.reset_result div {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+@media screen and (max-width:900px) {
+  .game-container {
+    margin: 30px 0;
+  }
+
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .game-container {
+    /* margin: 30px 0; */
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    /* margin: 50px 0 25px 25px; */
+  }
+
+  .far {
+    /* margin-right: 20px; */
+  }
+
+}
+
+@media screen and (max-width:423px) {
+  .header h1 {
+    content: 'Rock Paper Scciors';
+    font-size: 20px;
+  }
+
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container div.player-container:nth-child(2) div i,
+  .game-container div.player-container:nth-child(3) div i  {
+    width: 50px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    /* margin: 43px 0 25px 20px; */
+  }
+
+  .far {
+    font-size: 33px;
+  }
+
+}
